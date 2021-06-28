@@ -22,7 +22,7 @@ pipeline {
       stage('Start test app') {
          steps {
             powershell '''
-               #Start app line missing
+               docker-compose up -d
                ./scripts/test_container.ps1
             '''
          }
